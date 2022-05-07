@@ -22,7 +22,8 @@ def multipoles(mu, xi):
     '''
     Find redshift space correlation function multipoles for mocks
     '''
-    dmu = np.gradient(mu)[0]
+#     dmu = np.gradient(mu)[0]
+    dmu = mu[1]-mu[0]
     xi0 = np.sum(xi*dmu, axis=0)
     xi2 = xi.T.dot(2.5*(3*mu**2-1))*dmu
     xi4 = xi.T.dot(1.125*(35*mu**4-30*mu**2+3)*dmu)
@@ -36,7 +37,8 @@ def multipoles_trapz(mu, xi):
     Find redshift space correlation function multipoles for mocks
     '''
 
-    dmu=np.gradient(mu)[0]        
+#     dmu=np.gradient(mu)[0]
+    dmu = mu[1]-mu[0]
     xi0l=xi.T
     xi2l=xi.T*2.5*(3*mu**2-1)
     xi4l=xi.T*1.125*(35*mu**4 - 30 * mu**2 + 3)
