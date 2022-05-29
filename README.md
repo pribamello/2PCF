@@ -1,2 +1,3 @@
 # 2PCF
-Evaluates the 2PCF on a set of Pinocchio halo mocks
+
+Testes para descobrir o erro ao calcular a função de correlação dos Mocks do Pinocchio.
